@@ -4,6 +4,12 @@ Electron helper to listen for when user copies new text to clipboard
 
 ## Usage
 
+#### Install
+
+```ts
+yarn add -D electron-clipboard-listener
+```
+
 #### Basic Setup
 
 ```ts
