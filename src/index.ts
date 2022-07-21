@@ -1,8 +1,9 @@
 import { EventEmitter } from "events";
 import { clipboard, Clipboard } from "electron";
 
-//Types
-type ListeningClipboardEvents = "new-text";
+export enum ListeningClipboardEvents {
+  TEXT_UPDATED = "text",
+}
 
 interface WatchClipboard extends Clipboard {
   startWatching?: (interval?: number) => void;
@@ -26,7 +27,7 @@ ListeningClipboard.startWatching = (checkInterval: number = 750) => {
       let newText = clipboard.readText();
       if (compareText(currentText, newText)) {
         currentText = newText;
-        clipboardEvents.emit("new-text", newText);
+        clipboardEvents.emit(ListeningClipboardEvents.TEXT_UPDATED, newText);
       }
     }, checkInterval);
 };
