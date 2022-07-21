@@ -2,10 +2,22 @@
   "name": "electron-clipboard-listener",
   "version": "0.0.1",
   "description": "Electron utility to listen for updates to users clipboard",
-  "main": "index.js",
+  "keywords": [
+    "Electron",
+    "Clipboard"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "yarn build",
+    "build": "tsc"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "author": "Jase Owens",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
 }
