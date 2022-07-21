@@ -1,0 +1,11 @@
+{
+  "name": "electron-clipboard-listener",
+  "version": "0.0.1",
+  "description": "Electron utility to listen for updates to users clipboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jase Owens",
+  "license": "ISC"
+}
